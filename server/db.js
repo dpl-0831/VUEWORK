@@ -1,14 +1,16 @@
 const mysql = require('mysql2/promise');
 
 // MySQL 连接池
-// 连接信息从环境变量读取（可通过 server/.env 配置），避免把账号密码提交到公开代码仓库。
-// 参考项目根目录或 server/.env.example 里的字段说明。
+// 连接串说明：
+//   host      数据库地址（本机为 localhost）
+//   user      数据库账号
+//   password  数据库密码（请替换为你的真实密码，如 123456）
+//   database  数据库名
 const pool = mysql.createPool({
-  host: process.env.DB_HOST || 'localhost',
-  port: Number(process.env.DB_PORT) || 3306,
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || '',
-  database: process.env.DB_DATABASE || 'my_homepage',
+  host: 'localhost',
+  user: 'root',
+  password: '123456',
+  database: 'my_homepage',
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,

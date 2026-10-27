@@ -37,6 +37,3 @@ __screenshots__/
 
 # Vite
 *.timestamp-*-*.mjs
-
-# 环境变量（含数据库密码，绝不提交）
-.env

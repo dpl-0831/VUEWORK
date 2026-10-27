@@ -1,6 +1,3 @@
-// 加载 server/.env 中的环境变量（数据库配置），必须在引入 db.js 之前执行
-require('dotenv').config({ path: `${__dirname}/.env` });
-
 const express = require('express');
 const cors = require('cors');
 const pool = require('./db');

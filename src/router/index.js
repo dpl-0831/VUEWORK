@@ -87,7 +87,8 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(), 
+  // 使用 Vite 的 base（如 /VUEWORK/），保证子路径部署下路由前缀正确
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
   // 切换页面时自动回到顶部
   scrollBehavior(to, from, savedPosition) {
